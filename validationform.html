@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+  <h2>Registration</h2>
+  <form action="" name="registration">
+
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" id="firstname" placeholder="John">
+
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname" id="lastname" placeholder="Doe">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="john@doe.com">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<style>
+	@import "compass";
+	@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+
+	$formBg: #2c3e50;
+	$formColor: #fff;
+	$inputBg: #fff;
+	$inputColor: #000;
+	$buttonBg: #e67e22;
+	$buttonColor: #fff;
+	$errorMsgColor: #ff0000;
+	
+	* {
+	  margin: 0;
+	  padding: 0;
+	}
+
+	body {
+	  font-family: "Open Sans";
+	  font-size: 14px;
+	}
+
+	.container {
+	  width: 500px;
+	  margin: 25px auto;
+	}
+
+	form {
+	  padding: 20px;
+	  background: $formBg;
+	  color: $formColor;
+	  @include border-radius(4px);
+  
+	  label,
+	  input,
+	  button {
+	    border: 0;
+	    margin-bottom: 3px;
+	    display: block;
+	    width: 100%;
+	  }
+	  input {
+    	height: 25px;
+    	line-height: 25px;
+    	background: $inputBg;
+    	color: $inputColor;
+    	padding: 0 6px;
+    	@include box-sizing(border-box);
+  	  }
+  	  button {
+    	height: 30px;
+    	line-height: 30px;
+    	background: $buttonBg;
+    	color: $buttonColor;
+    	margin-top: 10px;
+    	cursor: pointer;
+  	  }
+      .error {
+    	color: $errorMsgColor;
+  	   }
+	}
+
+	.article-reference {
+	  margin-top: 15px;
+	  a {
+	    color: $buttonBg;
+ 	 }
+	}
+</style>
+
+<script type="text/javascript">
+	$(function() {
+  		$("form[name='registration']").validate({
+    		rules: {
+      			firstname: "required",
+      			lastname: "required",
+      			email: {
+      			  required: true,
+     			  email: true
+     			},
+     	 		password: {
+        		required: true,
+        		minlength: 5
+      		}
+    	},
+    		messages: {
+      			firstname: "Please enter your firstname",
+      			lastname: "Please enter your lastname",
+      			password: {
+        			required: "Please provide a password",
+       				 minlength: "Your password must be at least 5 characters long"
+      			},
+      			email: "Please enter a valid email address"
+    		},
+    		submitHandler: function(form) {
+     		 form.submit();
+    		}
+    	});
+    });
+</script>
+</body>
+</html>
