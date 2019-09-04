@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container{
+                margin-left: 40vw;
+                margin-top: 30vh;
+            }
+            
+            button{
+                margin: 0.05vh;
+                margin-top: 2vh;
+            }
+            
+            input{
+                margin-top: 2vh;
+            }
+            
+            .continer p{
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class = "container">
+            <p><u>Enter a number in each text box</u></p>
+            Number 1:<input type = "text" name = "num1" id = "num1"><br>
+            Number 2:<input type = "text" name = "num2" id = "num2"><br>
+            <button type="submit" onclick = "add()"> Add </button>
+            <button type="submit" onclick = "subtract()"> Subtract </button>
+            <button type="submit" onclick = "multiply()"> Multiply </button>
+            <button type="submit" onclick = "divide()"> Divide </button><br>
+            Result is: <input type = "text" name = "result" id = "result"><br>
+         </div>
+        <script>
+            function add() {
+                document.getElementById("result").value = parseFloat(document.getElementById("num1").value) + parseFloat(document.getElementById("num2").value);
+            }
+            function subtract() {
+                document.getElementById("result").value = parseFloat(document.getElementById("num1").value) - parseFloat(document.getElementById("num2").value);
+            }
+            function multiply() {
+                document.getElementById("result").value = parseFloat(document.getElementById("num1").value) * parseFloat(document.getElementById("num2").value);
+            }
+            function divide() {
+                document.getElementById("result").value = parseFloat(document.getElementById("num1").value) / parseFloat(document.getElementById("num2").value);
+            }
+        </script>
+    </body>
+    
+</html>
