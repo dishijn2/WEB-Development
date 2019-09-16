@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arithmetic operation</title>
+	<style type="text/css">
+		#form-outer{
+			background-color: white;
+  			margin: 0 auto;
+  			border-radius: 4px;
+  			width: 25%;
+  			padding: 7px;
+  			padding-top: 20px;
+  			border: 2px solid;
+  			border-color: black;
+		}
+		#title{
+			text-align: center;
+			font-size: 1em;
+    		font-weight: bold;
+  			margin: 20px;
+		}
+		.headig{
+			text-align: center;
+			font-size: 1em;
+  			margin: 20px;
+		}
+		#submit{
+			background-color:  white;
+  			color: black;
+  			height: 20px;
+  			width: 60px;
+  			border: 1px solid;
+		}
+		hr.new1 {
+			border-top: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+<div id="form-outer">
+  <h1 id="title">Arithmetic Operations</h1><hr class="new1">
+  <form id="form" method="GET" action="">
+  	<h3 class="headig"><u>Enter a number in each text box</u></h3>
+        Number 1:<input type = "text" name = "number1" id = "number1"><br>
+        Number 2:<input type = "text" name = "number2" id = "number2"><br>
+    <br>
+            <button type="submit" onclick = "add()"> Add </button>
+            <button type="submit" onclick = "subtract()"> Subtract </button>
+            <button type="submit" onclick = "multiply()"> Multiply </button>
+            <button type="submit" onclick = "divide()"> Divide </button>
+
+    <br>
+    <br>
+    Result is: <input type = "text" name = "result" id = "result"><br>
+  </form>
+</div>
+        <script>
+            function add() {
+                document.getElementById("result").value = parseFloat(document.getElementById("number1").value) + parseFloat(document.getElementById("number2").value);
+            }
+            function subtract() {
+                document.getElementById("result").value = parseFloat(document.getElementById("number1").value) - parseFloat(document.getElementById("number2").value);
+            }
+            function multiply() {
+                document.getElementById("result").value = parseFloat(document.getElementById("number1").value) * parseFloat(document.getElementById("number2").value);
+            }
+            function divide() {
+                document.getElementById("result").value = parseFloat(document.getElementById("number1").value) / parseFloat(document.getElementById("number2").value);
+            }
+        </script>
+
+</body>
+</html>
