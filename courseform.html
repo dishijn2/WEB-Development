@@ -1,0 +1,197 @@
+<div id="form-outer">
+ <h1 id="title">Course Information</h1>
+ <form id="Course Information" method="GET" action="">
+ <div class="rowTab">
+ <div class="labels">
+ <label id="name-label" for="name">* Name: </label>
+ </div>
+ <div class="rightTab">
+ <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your
+name" required>
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels">
+ <label id="email-label" for="email">* Email: </label>
+ </div>
+ <div class="rightTab">
+ <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your
+Email">
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels">
+ <label for="currentPos">Gender</label>
+ </div>
+ <div class="rightTab">
+ <select id="dropdown" name="currentPos" class="dropdown">
+ <option disabled value>Select an option</option>
+ <option value="Male">Male</option>
+ <option value="Female">Female</option>
+ <option value="Other">Other</option>
+ </select>
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels">
+ <label id="name-label" for="name">* Date of Birth: </label>
+ </div>
+ <div class="rightTab">
+ <input autofocus type="date" name="name" id="name" class="input-field" placeholder="mm/dd/yyyy"
+required>
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels">
+ <label id="Course-label" for="name">* Course Name: </label>
+ </div>
+ <div class="rightTab">
+ <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter course
+name" required>
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels">
+ <label id="Course-label" for="name">* Course Code: </label>
+ </div>
+ <div class="rightTab">
+ <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter course
+Code" required>
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels" >
+ <label for="currentPos">Lab Slot</label>
+ </div>
+ <div class="rightTab">
+ <select class="dropdown" >
+ <option disabled value>Select an option</option>
+ <option value="">L23+L24</option>
+ <option value="">L33+L34</option>
+ <option value="">L35+L36</option>
+ </select>
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels">
+ <label id="name-label" for="name">* Mobile Number: </label>
+ </div>
+ <div class="rightTab">
+ <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your
+mobile number" required>
+ </div>
+ </div>
+ <div class="rowTab">
+ <div class="labels">
+ <label ] for="name"> Remarks: </label>
+ </div>
+ <div class="rightTab" class="mainTab">
+ <textarea  class="input-field" style="height:80px;resize:vertical;" 
+placeholder="Enter your comment here..."></textarea>
+ </div>
+ </div>
+ <button id="submit" type="submit">Submit</button>
+ </form>
+</div>
+<style type="text/css">
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+html,
+body {
+ background-color: white;
+ text-align: center;
+ font-family: 'Raleway', Helvetica, sans-serif;
+ min-width: 320px;
+}
+header {
+ font-size: 3em;
+ font-weight: bold;
+ margin: 20px;
+}
+#form-outer {
+ background-color: #ADD8E6;
+ margin: 0 auto;
+ border-radius: 4px;
+ width: 75%;
+ max-width: 900px;
+ padding: 10px;
+ padding-top: 20px;
+ border: 2px solid;
+ border-color: #008000;
+ border-radius: 12px;
+}
+.labels {
+ display: inline-block;
+ text-align: right;
+ width: 280px;
+ padding: 5px;
+ vertical-align: top;
+ margin-top: 10px;
+ border: 2px solid;
+ border-radius: 3px;
+ border-color: #008000;
+ font-weight: bold;
+}
+.rightTab {
+ display: inline-block;
+ text-align: left;
+ width: 48%;
+ vertical-align: middle;
+}
+.input-field {
+ height: 30px;
+ width: 280px;
+ padding: 5px;
+ margin: 10px;
+ border: 2px solid #c0c0c0;
+ border-radius: 3px;
+ border-color: #008000;
+}
+#submit {
+ background-color: #008000;
+ border-radius: 4px;
+ color: white;
+ font-size: 1em;
+ height: 40px;
+ width: 190px;
+ margin: 10px;
+ border: 1px solid;
+}
+.dropdown {
+ height: 35px;
+ width: 140px;
+ padding: 5px;
+ margin: 10px;
+ margin-top: 15px;
+ border: 1px solid #c0c0c0;
+ border-radius: 2px;
+}
+.mainTab {
+ width: 1050px;
+ margin-left: 8px;
+ padding: 6px 12px;
+}
+@media screen and (max-width: 833px) {
+ .input-field {
+ width: 80%;
+ }
+ select {
+ width: 90%;
+ }
+}
+@media screen and (max-width: 520px) {
+ .labels {
+ width: 100%;
+ text-align: left;
+ }
+ .rightTab {
+ width: 100%;
+ float: left;
+ }
+ .input-field {
+ width: 120%;
+ }
+ select {
+ width: 100%;
+ }
+}
+</style>
