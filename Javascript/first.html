@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+ <script language="JavaScript">
+ function showInput() {
+ document.getElementById('first').innerHTML =
+document.getElementById("name").value;
+ document.getElementById('second').innerHTML =
+document.getElementById("age").value;
+ document.getElementById('third').innerHTML =
+document.getElementById("phone").value;
+ document.getElementById('fourth').innerHTML =
+document.getElementById("email").value;
+ document.getElementById('fifth').innerHTML =
+document.getElementById("position").value;
+ document.getElementById('ninth').innerHTML =
+document.getElementById("city").value;
+ document.getElementById('sixth').innerHTML =
+document.getElementById("start").value;
+ document.getElementById('seventh').innerHTML =
+document.getElementById("salary").value;
+ document.getElementById('eighth').innerHTML =
+document.getElementById("skill").value;
+ }
+ </script>
+</head>
+<body>
+ <style>
+.outer {
+	border: 1px black;
+	width: 70%;
+
+}
+input[type=text], select {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ box-sizing: border-box;
+}
+input[type=submit] {
+ width: 100%;
+ background-color: 	#DC143C;
+ color: white;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+input[type=submit]:hover {
+ background-color: #CD5C5C;
+}
+div {
+ border-radius: 5px;
+ background-color: #f2f2f2;
+ padding: 20px;
+}
+</style>
+<body>
+<div class="outer">
+<div>
+ <h3 style="text-align: center; padding-top: 30px" >Online Application form for Job Vacancy</h3>
+ <hr><hr>
+</div>
+<form style="padding-left: 60px;padding-top: 30px">
+ <label><b>First and Last name</b></label>
+ <input type="text" name="message" id="name">
+ <br><br>
+ <label><b>Age</b></label>
+ <input type="text" name="message" id="age">
+ <br><br>
+ <label><b>Mobile No.</b></label>
+ <input type="text" name="message" id="phone">
+ <br><br>
+ <label><b>Email Id</b></label>
+ <input type="text" name="message" id="email">
+ <br><br>
+ <label><b>Permanent Address</b></label>
+ <input type="text" name="message" id="city">
+ <br><br>
+ <label><b>Position you are applying for</b></label>
+ <select name="message" id="position">
+ <option value="soft">Software Engineer</option>
+ <option value="hard">Hardware Engineer</option>
+ <option value="finance">Finance</option>
+ <option value="teste">Data Analyst</option>
+</select>
+ <br><br>
+ <label><b>Expected start date</b></label>
+ <input type="text" name="message" id="start">
+ <br><br>
+ <label><b>Salary Expectations</b></label>
+ <input type="text" name="message" id="salary">
+ <br><br>
+ <label><b>Skillset</b></label>
+ <input type="text" name="message" id="skill">
+ <br><br>
+</form>
+<div style="padding-left: 60px;padding-top: 30px">
+ <input type="submit" onclick="showInput();"><br/></div>
+<div style="padding-left: 60px;padding-top: 30px">
+<p><span id='first'></span></p>
+<p><span id='second'></span></p>
+<p><span id='third'></span></p>
+<p><span id='fourth'></span></p>
+<p><span id='fifth'></span></p>
+<p><span id='ninth'></span></p>
+<p><span id='sixth'></span></p>
+<p><span id='seventh'></span></p>
+<p><span id='eighth'></span></p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+ <title>Dynamic Combobox</title>
+</head>
+ <script>
+ function dynabox()
+ {
+ var city=document.getElementById("cit").value;
+ if(city==="Odisha") {
+ var city_list = ["Bhubaneshwar", "Puri", "Keonjhar", "Sambalpur", "Rourkela"];
+ }
+ else if(city==="Uttar Pradesh")
+ {
+ var city_list=["Bareilly","Kanpur","Lucknow","Ghaziabad","Allahabad","Pillibhit"];
+ }
+ else if(city==="Karnataka")
+ {
+ var city_list=["Bangalore","Mangalore","Mysuru","Vijayapura","Belgaum"];
+ }
+ var string="";
+ for(i=0;i<city_list.length;i++)
+ {
+ string=string+"<option>"+city_list[i]+"</option>";
+ }
+ string="<select name='any_name'>"+string+"</select>";
+ document.getElementById("output").innerHTML=string;
+ }
+ </script>
+<body bgcolor="lightcoral">
+<div align="center" style="padding-top: 50px;padding-left: 50px; size: 30px">
+<select id="cit" onchange="dynabox()" >
+ <option>State Selection</option>
+ <option>Uttar Pradesh</option>
+ <option>Odisha</option>
+ <option>Karnataka</option>
+</select>
+</div>
+<div align="center" id="output" style="padding-top: 70px;padding-left: 50px; size: 30px">
+</div>
+</body>
+</html>

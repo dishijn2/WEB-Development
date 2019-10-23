@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Suffix</title>
+</head>
+<body bgcolor="salmon" align="center">
+<h2 style="padding-top: 70px;padding-left: 80px; font-size: 30px"><u>Today's Date in
+English Ordinal:</u></h2>
+<p align="left" id="disp" style="padding-top: 10px;padding-left: 50px; font-size:
+25px"></p>
+<script>
+ function datefix(dt)
+ {
+ return dt.getDate()+(dt.getDate() % 10 == 1 && dt.getDate() != 11 ? 'st' : (dt.getDate()
+% 10 == 2 &&
+ dt.getDate() != 12 ? 'nd' : (dt.getDate() % 10 == 3 && dt.getDate() != 13 ? 'rd' : 'th')));
+ }
+ dt = new Date();
+ document.getElementById('disp').innerText=datefix(dt);
+</script>
+</body>
+</html>

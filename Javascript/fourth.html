@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+ <title>Email Validate</title>
+ <script >
+ function validatef(email)
+{
+ var input = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+ if(email.value.match(input))
+ {
+ document.form.text.focus();
+ alert("Correct Email Id")
+ return true;
+ }
+ else{
+ alert("Please enter correct Email ID");
+ document.form.text.focus();
+ return false
+ }
+}
+ </script>
+</head>
+<body onload="document.form.text.focus()" background="email.jpg">
+<div align ="center" class="email" style="padding-left: 50px;padding-top: 150px;">
+ <h1>Enter a valid E-mail Address:</h1>
+ <form name="form">
+ <input type="text" name="text"><br><br>
+ <input type="submit" name="sumbit" onclick="validatef(document.form.text)"
+value="Check Id">
+ </form>
+</div>
+</body>
+</html>
